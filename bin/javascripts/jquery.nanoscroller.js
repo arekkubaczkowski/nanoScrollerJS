@@ -1,6 +1,6 @@
-/*! nanoScrollerJS - v0.8.7 - 2015
+/*! nanoScrollerJS - v0.8.7 - 2016
 * http://jamesflorentino.github.com/nanoScrollerJS/
-* Copyright (c) 2015 James Florentino; Licensed MIT */
+* Copyright (c) 2016 James Florentino; Licensed MIT */
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     return define(['jquery'], function($) {
@@ -721,7 +721,8 @@
      */
 
     NanoScroll.prototype.reset = function() {
-      var content, contentHeight, contentPosition, contentStyle, contentStyleOverflowY, paneBottom, paneHeight, paneOuterHeight, paneTop, parentMaxHeight, right, sliderHeight;
+      var content, contentHeight, contentPosition, contentStyle, contentStyleOverflowY, options, paneBottom, paneHeight, paneOuterHeight, paneTop, parentMaxHeight, right, sliderHeight;
+      options = this.options;
       if (this.iOSNativeScrolling) {
         this.contentHeight = this.content.scrollHeight;
         return;
@@ -772,10 +773,12 @@
       if ((content.scrollHeight === content.clientHeight) || (this.pane.outerHeight(true) >= content.scrollHeight && contentStyleOverflowY !== SCROLL)) {
         this.pane.hide();
         this.isActive = false;
+        this.$el.removeClass(options.enabledClass);
       } else if (this.el.clientHeight === content.scrollHeight && contentStyleOverflowY === SCROLL) {
         this.slider.hide();
       } else {
         this.slider.show();
+        this.$el.addClass(options.enabledClass);
       }
       this.pane.css({
         opacity: (this.options.alwaysVisible ? 1 : ''),

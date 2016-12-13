@@ -4,7 +4,7 @@
   "version": "0.8.7",
   "author": "James Florentino <jamesflorentino@gmail.com> (http://blog.jamesflorentino.com/)",
   "bugs": {
-    "url": "https://github.com/jamesflorentino/nanoScrollerJS/issues"
+    "url": "https://github.com/arekkubaczkowski/nanoScrollerJS/issues"
   },
   "contributors": [
     "Krister Kari (http://krister.fi/)"
@@ -33,7 +33,7 @@
     "test": "tests"
   },
   "format": "amd",
-  "homepage": "https://github.com/jamesflorentino/nanoScrollerJS",
+  "homepage": "https://github.com/arekkubaczkowski/nanoScrollerJS",
   "keywords": [
     "ecosystem:jquery",
     "jquery-plugin",
@@ -48,7 +48,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamesflorentino/nanoScrollerJS.git"
+    "url": "https://github.com/arekkubaczkowski/nanoScrollerJS.git"
   },
   "scripts": {
     "test": "grunt test"
